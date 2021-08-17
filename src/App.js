@@ -39,9 +39,13 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route exact path="/" component={Summary}/>
+        <Route exact path="/">
+          <Summary users={users}/>
+        </Route>
         <Route exact path="/subscribers" component={Subscribers}/>
-        <Route exact path="/subscriptionDetails" component={SubscriptionDetails}/>
+        <Route exact path="/subscriptionDetails" >
+          <SubscriptionDetails subscriptions={subscriptions}/>
+        </Route>
 
       </Switch>
 

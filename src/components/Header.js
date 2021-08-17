@@ -6,11 +6,15 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <h2>Dashboard</h2>
+        <Link to="/">
+          <h2>Dashboard</h2>
+        </Link>
       </div>
       <div className="header__lists">
         <ul>
-          <Link to="/"><li>Summary</li></Link>
+          <Link to="/">
+            <li>Summary</li>
+          </Link>
           <Link to="/subscribers">
             <li>Subscribers</li>
           </Link>

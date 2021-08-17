@@ -1,9 +1,12 @@
 import React from 'react'
 
-const SubscriptionDetails = () => {
+const SubscriptionDetails = ({subscriptions}) => {
     return (
         <div>
-            <h1>subscription Details</h1>
+            {subscriptions.map(s=>
+                <div key={s.id}>
+                    <h1>{s.package}</h1>
+                </div>)}
         </div>
     )
 }

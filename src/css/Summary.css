@@ -1,0 +1,29 @@
+.summary{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color:#8c8a89;
+    font-weight: bold;
+}
+.summary__user{
+    height: 20rem;
+    width: 20rem;
+    background:#e3e5e8;
+    margin: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+}
+
+.summary__heading{
+    text-align: center;
+    margin: 1rem;
+}

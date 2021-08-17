@@ -9,6 +9,8 @@
 }
 .header h2{
     padding:0 0 0 2rem;
+    color:#8c8a89;
+    text-decoration: none;
 }
 .header__lists ul{
     list-style: none;
@@ -16,4 +18,9 @@
 .header__lists li{
     display: inline-block;
     padding-right: 3rem;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:#8c8a89;
 }

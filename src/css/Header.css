@@ -3,8 +3,17 @@
     width: 100vw;
     background:#e3e5e8;
     display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items:center
 }
 .header h2{
     padding:0 0 0 2rem;
+}
+.header__lists ul{
+    list-style: none;
+}
+.header__lists li{
+    display: inline-block;
+    padding-right: 3rem;
 }

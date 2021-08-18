@@ -9,6 +9,19 @@
     color:#8c8a89;
     font-weight: bold;
 }
+.summaryy{
+    width: auto;
+    color:#8c8a89;
+    background:#e3e5e8;
+    padding: 2rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+}
 .summary__user{
     height: 20rem;
     width: 20rem;

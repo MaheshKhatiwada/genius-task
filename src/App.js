@@ -41,7 +41,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Summary users={users}/>
+          <Summary users={users} subscriptions={subscriptions}/>
         </Route>
         <Route exact path="/subscribers" >
           <Subscribers users={users} subscriptions={subscriptions}/>

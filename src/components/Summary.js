@@ -1,8 +1,11 @@
 import React from "react";
+import { getSubscribers } from "../common/getSubscribers";
 import "../css/Summary.css";
 
-const Summary = ({ users }) => {
-  return (
+const Summary = ({ users,subscriptions }) => {
+
+
+  const displayUserInfo=()=>(
     <>
       <h2 className="summary__heading">User's Info</h2>
       <div className="summary">
@@ -26,6 +29,36 @@ const Summary = ({ users }) => {
           );
         })}
         </div>
+    </>
+
+  );
+
+  const displaySummary=()=>{
+    const allUsers=getSubscribers(users,subscriptions);
+    const subscribers = allUsers.filter(
+      (user) => user.userSubscription.length > 0
+    );
+    const activeUsers=users.filter(user=> user.active==="1")
+    console.log(activeUsers)
+    return(
+      <>
+      <h1>Summary</h1>
+      <div>
+        <h3>Total Users: {users.length}</h3>
+        <h3>Total Subscriptions Data : {subscriptions.length}</h3>
+        <h3>Total Subscribers:{subscribers.length}</h3>
+        <h3>Total Non-Subscribers:{users.length-subscribers.length}</h3>
+        <h3>Active Users:{activeUsers.length}</h3>
+      </div>
+      </>
+    )
+  }
+  return (
+    <>
+    <div className="summaryy">
+      {displaySummary()}
+    </div>
+    <div>{displayUserInfo()}</div>
     </>
   );
 };

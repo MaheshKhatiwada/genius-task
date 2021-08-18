@@ -1,37 +1,30 @@
 import React from "react";
+import { getSubscribers } from "../common/getSubscribers";
 
 const Subscribers = ({ subscriptions, users }) => {
-    const getSubscribers = () => {
-        let userWithSubscriptionArray = [];
-        users.map((user) => {
-            let userSubscription = [];
+  const displayData = () => {
+    const allUsers = getSubscribers(users, subscriptions);
+    const subscribers = allUsers.filter(
+      (user) => user.userSubscription.length > 0
+    );
+    const a = subscribers.map((subscriber) => {
+      const { first_name, middle_name, last_name, username } = subscriber;
+      return (
+        <div>
+          <span>Name : {`${first_name}  ${middle_name} ${last_name} `}</span>{" "}
+          <span> Username: {username}</span>
+        </div>
+      );
+    });
+    return a;
+  };
 
-            subscriptions.map((s) => {
-                if (Number(s.user_id) === user.id) {
-                    userSubscription.push(s);
-                }
-            });
-            user.userSubscription = userSubscription;
-            userWithSubscriptionArray.push(user);
-            //console.log(userWithSubscriptionArray)
-        });
-        return userWithSubscriptionArray;
-    };
-    const displayData = () => {
-      const allUsers = getSubscribers();
-        const subscribers=allUsers.filter(user=> user.userSubscription.length>0)
-       const a= subscribers.map(subscriber=> {
-            const {first_name,middle_name,last_name,username}=subscriber
-            return(
-                <div >
-                    <span>{first_name}</span> <span>{username}</span>
-                </div>
-            )
-        })
-        return a;
-    };
-
-  return <div>{displayData()}</div>;
+  return (
+      <>
+      <h1>Subscribers</h1>
+  <div>{displayData()}</div>
+  </>
+  );
 };
 
 export default Subscribers;

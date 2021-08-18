@@ -11,7 +11,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [subscriptions, setSubscriptions] = useState([]);
 
-
   const getUsers=async()=> {
     try {
       const response =await axios.get("users.json");
@@ -32,7 +31,9 @@ function App() {
   useEffect(() => {
     getUsers();
     getSubscriptions();
-  }, []);
+  },[]);
+
+
   return (
     <BrowserRouter>
 
@@ -42,9 +43,11 @@ function App() {
         <Route exact path="/">
           <Summary users={users}/>
         </Route>
-        <Route exact path="/subscribers" component={Subscribers}/>
+        <Route exact path="/subscribers" >
+          <Subscribers users={users} subscriptions={subscriptions}/>
+        </Route>
         <Route exact path="/subscriptionDetails" >
-          <SubscriptionDetails subscriptions={subscriptions}/>
+          <SubscriptionDetails subscriptions={subscriptions} users={users}/>
         </Route>
 
       </Switch>

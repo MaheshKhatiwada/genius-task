@@ -13,10 +13,10 @@ const SubscriptionDetails = ({subscriptions,users}) => {
           const { first_name, middle_name, last_name, username,userSubscription } = subscriber;
           return (
             <div className="details__data">
-              <span>Name : {`${first_name}  ${middle_name} ${last_name} `}</span>{" "}
-              <span> Username: {username}</span>
+              <h3>Name : {`${first_name}  ${middle_name} ${last_name} `}</h3>{" "}
+              <h3> Username: {username}</h3>
 
-              <h5>Package: {userSubscription.map(p=> <span>  {  `${p.package}"` }  </span>)}</h5>
+              <h3>Package: {userSubscription.map(p=> <span>  {  `"${p.package}"` }  </span>)}</h3>
             </div>
           );
         });

@@ -16,6 +16,7 @@
     list-style: none;
 }
 .header__lists li{
+    font-size:larger;
     display: inline-block;
     padding-right: 3rem;
     font-weight: bold;

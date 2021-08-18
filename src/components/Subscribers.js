@@ -1,5 +1,6 @@
 import React from "react";
 import { getSubscribers } from "../common/getSubscribers";
+import "../css/Subscribers.css"
 
 const Subscribers = ({ subscriptions, users }) => {
   const displayData = () => {
@@ -10,7 +11,7 @@ const Subscribers = ({ subscriptions, users }) => {
     const a = subscribers.map((subscriber) => {
       const { first_name, middle_name, last_name, username } = subscriber;
       return (
-        <div>
+        <div className="subscribers__data">
           <span>Name : {`${first_name}  ${middle_name} ${last_name} `}</span>{" "}
           <span> Username: {username}</span>
         </div>
@@ -21,8 +22,8 @@ const Subscribers = ({ subscriptions, users }) => {
 
   return (
       <>
-      <h1>Subscribers</h1>
-  <div>{displayData()}</div>
+      <h1 className="heading">Subscribers</h1>
+  <div className="subscribers">{displayData()}</div>
   </>
   );
 };

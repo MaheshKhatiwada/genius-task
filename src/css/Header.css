@@ -3,12 +3,12 @@
     width: 100vw;
     background:#e3e5e8;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items:center
 }
 .header h2{
-    padding:0 0 0 2rem;
+    /* padding:0 0 0 2rem; */
     color:#8c8a89;
     text-decoration: none;
 }

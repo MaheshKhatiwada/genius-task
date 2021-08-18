@@ -39,7 +39,6 @@ const Summary = ({ users,subscriptions }) => {
       (user) => user.userSubscription.length > 0
     );
     const activeUsers=users.filter(user=> user.active==="1")
-    console.log(activeUsers)
     return(
       <>
       <h1>Summary</h1>

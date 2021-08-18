@@ -8,11 +8,10 @@ const Subscribers = ({ subscriptions, users }) => {
     const subscribers = allUsers.filter(
       (user) => user.userSubscription.length > 0
     );
-    console.log(subscribers)
     const subscriberUsers = subscribers.map((subscriber) => {
-      const { first_name, middle_name, last_name, username ,join_date,country,userSubscription} = subscriber;
+      const { id,first_name, middle_name, last_name, username ,join_date,country} = subscriber;
       return (
-        <div className="subscribers__data">
+        <div className="subscribers__data" key={id}>
           <h3>Name : {`${first_name}  ${middle_name} ${last_name} `}</h3>{" "}
           <h3> Username: {username}</h3>
           <h3>Country: {country}</h3>

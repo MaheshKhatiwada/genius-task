@@ -9,18 +9,18 @@ const SubscriptionDetails = ({subscriptions,users}) => {
         const subscribers = allUsers.filter(
           (user) => user.userSubscription.length > 0
         );
-        const a = subscribers.map((subscriber) => {
-          const { first_name, middle_name, last_name, username,userSubscription } = subscriber;
+        const subscriberUsers = subscribers.map((subscriber) => {
+          const {id, first_name, middle_name, last_name, username,userSubscription } = subscriber;
           return (
-            <div className="details__data">
+            <div  className="details__data" key={id} >
               <h3>Name : {`${first_name}  ${middle_name} ${last_name} `}</h3>{" "}
               <h3> Username: {username}</h3>
 
-              <h3>Package: {userSubscription.map(p=> <span>  {  `"${p.package}"` }  </span>)}</h3>
+              <h3>Package: {userSubscription.map((p,idx)=> <span key={idx}>  {  `"${p.package}"` }  </span>)}</h3>
             </div>
           );
         });
-        return a;
+        return subscriberUsers;
       };
 
 

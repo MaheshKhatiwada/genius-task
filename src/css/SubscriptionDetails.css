@@ -1,0 +1,28 @@
+.details{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color:#8c8a89;
+
+ }
+
+ .details__data{
+     height: 10rem;
+     width: 20rem;
+     background:#e3e5e8;
+     margin: 2rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     border-radius: 2rem;
+ }
+ .heading{
+     text-align: center;
+     padding:0 0 0 2rem;
+     color:#8c8a89;
+ }

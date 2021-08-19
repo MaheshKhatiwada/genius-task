@@ -27,3 +27,16 @@
     padding:0 0 0 2rem;
     color:#8c8a89;
 }
+.inputSearch{
+    display: flex;
+    justify-content: center;
+}
+
+.inputSearch input{
+    text-align: center;
+    background:#e3e5e8;
+    height: 5vh;
+    width: 30vw;
+    color:#8c8a89;
+    font-size: larger;
+}

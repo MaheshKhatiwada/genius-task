@@ -3,8 +3,6 @@ import { getSubscribers } from "../common/getSubscribers";
 import "../css/Summary.css";
 
 const Summary = ({ users,subscriptions }) => {
-
-
   const displayUserInfo=()=>(
     <>
       <h2 className="summary__heading">User's Info</h2>

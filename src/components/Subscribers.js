@@ -54,7 +54,7 @@ const Subscribers = ({ subscriptions, users }) => {
   return (
     <>
       <h1 className="heading">Subscribers</h1>
-      <div>
+      <div className="buttons">
         <button onClick={() => handleSort("asc")}>Asc Sort</button>
         <button onClick={() => handleSort("desc")}>Desc Sort</button>
       </div>
